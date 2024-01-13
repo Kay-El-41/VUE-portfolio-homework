@@ -3,9 +3,20 @@ import NavBar from '@/components/NavBar.vue'
 import HeroSection from '@/components/HeroSection.vue'
 import AboutSection from '@/components/AboutSection.vue'
 import ExperienceSection from '@/components/ExperienceSection.vue'
+import WorkSection from '@/components/WorkSection.vue'
+import ContactSection from '@/components/ContactSection.vue'
+import FooterBar from '@/components/FooterBar.vue'
 export default {
   name: 'HomeView',
-  components: { NavBar, HeroSection, AboutSection, ExperienceSection },
+  components: {
+    NavBar,
+    HeroSection,
+    AboutSection,
+    ExperienceSection,
+    WorkSection,
+    ContactSection,
+    FooterBar
+  },
   data() {
     return {
       activeSection: ''
@@ -31,6 +42,9 @@ export default {
   <HeroSection />
   <AboutSection />
   <ExperienceSection />
+  <WorkSection />
+  <ContactSection />
+  <FooterBar />
 </template>
 
 <style scoped></style>
