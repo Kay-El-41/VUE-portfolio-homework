@@ -2,13 +2,17 @@
 import IconProfile from '@/components/icons/IconProfile.vue'
 import IconMenu from '@/components/icons/IconMenu.vue'
 export default {
-  name: 'NavBar',
+  props: {
+    activeMenu: String
+  },
+  emit: ['handleClickMenu'],
   components: { IconProfile, IconMenu },
   data() {
     return {
       navMenu: ['Title', 'Experience', 'Work', 'Contact']
     }
-  }
+  },
+  methods: {}
 }
 </script>
 
@@ -23,9 +27,14 @@ export default {
           v-for="(menu, idx) in navMenu"
           :key="idx"
           class="cursor-pointer group active:scale-95 transition"
+          @click="$emit('handleClickMenu', menu)"
         >
           <span class="text-teal-300 group-hover:text-slate-200">0{{ idx + 1 }}.</span>
-          <span class="text-slate-200 group-hover:text-teal-300">&nbsp;{{ menu }}</span>
+          <span
+            class="group-hover:text-teal-300"
+            :class="activeMenu === menu ? 'text-teal-300' : 'text-slate-200'"
+            >&nbsp;{{ menu }}</span
+          >
         </li>
       </ul>
       <button
