@@ -9,7 +9,7 @@ export default {
   components: { IconProfile, IconMenu },
   data() {
     return {
-      navMenu: ['Title', 'Experience', 'Work', 'Contact']
+      navMenu: ['About', 'Experience', 'Work', 'Contact']
     }
   },
   methods: {}
@@ -18,9 +18,12 @@ export default {
 
 <template>
   <nav
-    class="w-screen sticky top-0 left-0 z-10 h-16 md:h-20 flex bg-blue-950 justify-between items-center px-3 md:px-5 shadow-md"
+    class="w-screen sticky top-0 left-0 z-10 h-16 md:h-20 flex bg-indigo-950 justify-between items-center px-3 md:px-5 shadow-md"
   >
-    <IconProfile class="text-4xl md:text-5xl text-teal-300" />
+    <IconProfile
+      class="text-4xl md:text-5xl text-teal-300 cursor-pointer"
+      @click="$emit('handleClickMenu', 'hero')"
+    />
     <div class="hidden md:flex h-full items-center gap-10 text-lg">
       <ul class="flex space-x-10 items-center h-full">
         <li

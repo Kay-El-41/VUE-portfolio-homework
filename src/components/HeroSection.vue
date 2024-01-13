@@ -5,7 +5,7 @@ export default {
 </script>
 
 <template>
-  <section class="bg-blue-950 px-10 lg:px-60 py-20 scroll-mt-20" id="title">
+  <section class="bg-indigo-950 px-10 lg:px-60 py-20 scroll-mt-20" id="hero">
     <div class="space-y-1 lg:space-y-3 mb-4 lg:mb-6">
       <p class="text-teal-300 lg:text-lg lg:font-semibold lg:-mb-2">Hi, my name is</p>
       <h1 class="text-4xl font-bold lg:text-6xl text-white opacity-75">Nay Hlaing Oo.</h1>

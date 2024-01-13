@@ -1,12 +1,13 @@
 <script>
 import NavBar from '@/components/NavBar.vue'
 import HeroSection from '@/components/HeroSection.vue'
+import AboutSection from '@/components/AboutSection.vue'
 export default {
   name: 'HomeView',
-  components: { NavBar, HeroSection },
+  components: { NavBar, HeroSection, AboutSection, AboutSection },
   data() {
     return {
-      activeSection: 'Title'
+      activeSection: ''
     }
   },
   methods: {
@@ -27,6 +28,7 @@ export default {
 <template>
   <NavBar @handleClickMenu="goToSection" :activeMenu="activeSection" />
   <HeroSection />
+  <AboutSection />
 </template>
 
 <style scoped></style>
